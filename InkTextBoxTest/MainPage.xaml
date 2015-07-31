@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="InkTextBoxTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InkTextBoxTest"
+    xmlns:custom="using:InkTextBox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="75">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" ></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+           
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Normal TextBox" VerticalAlignment="Top"></TextBlock>
+        <TextBox  Grid.Row="0" Grid.Column="0" Header="First Name:" VerticalAlignment="Top"  ></TextBox>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="InkTextBox InkCanvasPosition=OverTextAndRight" VerticalAlignment="Top" ></TextBlock>
+        <custom:InkTextBox  Grid.Row="1" Grid.Column="0" Header="First Name:" InkCanvasPosition="OverTextAndRight" ></custom:InkTextBox>
+        <TextBlock  Grid.Row="2" Grid.Column="1" Text="InkTextBox InkCanvasPosition=BelowTextAndRight" VerticalAlignment="Top"></TextBlock>
+        <custom:InkTextBox Grid.Row="2" Grid.Column="0" Header="First Name:" InkCanvasPosition="BelowTextAndRight" ></custom:InkTextBox>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="InkTextBox InkCanvasPosition=BelowTextFullWindow" VerticalAlignment="Top"></TextBlock>
+        <custom:InkTextBox Grid.Row="3" Grid.Column="0" Header="First Name:" InkCanvasPosition="BelowTextFullWindow" ></custom:InkTextBox>
+    </Grid>
+</Page>
